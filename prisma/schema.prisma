@@ -11,12 +11,13 @@ datasource db {
 }
 
 model Course {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
+   id String @id @default(auto()) @map("_id") @db.ObjectId
   cover String
   title String
   instructor String
   duration String
   rating Float
+  students Int
   description String
   price Float
   createdAt DateTime @default(now())
