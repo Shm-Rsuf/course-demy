@@ -1,5 +1,7 @@
+import { currencyConverter } from "@/utilities/currencyConverter";
 import Image from "next/image";
 import Link from "next/link";
+import { FaStar } from "react-icons/fa";
 
 const CourseItem = ({ course }) => {
   console.log(course);
@@ -27,22 +29,35 @@ const CourseItem = ({ course }) => {
         />
       </div>
 
-      <div>
-        <h3>{title}</h3>
-        <p>
-          <span>Instuctor: {instructor}</span>
-          <span>Duration: {duration}</span>
+      <div className="p-5 space-y-2 text-sm">
+        <h3 className="text-[1.2rem] font-semibold text-teal-400">{title}</h3>
+        <p className="flex-between text-gray-600/75">
+          <span>
+            By <span className="text-gray-900 font-bold">{instructor}</span>
+          </span>
+          <span>
+            Duration:{" "}
+            <span className="text-gray-900 font-bold">{duration}</span>
+          </span>
         </p>
 
-        <p>
-          <span>Rating: {rating}</span>
-          <span>Students: {students}</span>
+        <p className="flex-between text-gray-600/75">
+          <span>
+            Students:{" "}
+            <span className="text-gray-900 font-bold">{students}</span>
+          </span>
+          <span className="flex-between gap-[2px]">
+            <FaStar className="text-yellow-400" />{" "}
+            <FaStar className="text-yellow-400" />{" "}
+            <FaStar className="text-yellow-400" />{" "}
+            <span className="text-gray-900 font-bold">{rating}</span>
+          </span>
         </p>
 
-        <p>{description}</p>
+        <p className="bg-cyan-500 h-20">{description.substring(0, 150)}...</p>
 
-        <div>
-          <p>{price}</p>
+        <div className="flex-between">
+          <p>{currencyConverter(price)}</p>
           <Link href={`/courses/${id}`}>View Details</Link>
         </div>
       </div>
