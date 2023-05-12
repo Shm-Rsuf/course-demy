@@ -58,7 +58,12 @@ const CourseItem = ({ course }) => {
         <div className="flex-between">
           <p>{currencyConverter(price)}</p>
 
-          <Button href={`/courses/${id}`} placeholder="view details" />
+          <Button
+            href={`/courses/${id}`}
+            placeholder="View Details"
+            color="primary"
+            size="full"
+          />
         </div>
       </div>
     </div>
