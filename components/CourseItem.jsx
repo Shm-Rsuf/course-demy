@@ -1,10 +1,9 @@
 import { currencyConverter } from "@/utilities/currencyConverter";
 import Image from "next/image";
-import Link from "next/link";
 import { FaStar } from "react-icons/fa";
+import Button from "./Button";
 
 const CourseItem = ({ course }) => {
-  console.log(course);
   const {
     cover,
     duration,
@@ -54,11 +53,12 @@ const CourseItem = ({ course }) => {
           </span>
         </p>
 
-        <p className="bg-cyan-500 h-20">{description.substring(0, 150)}...</p>
+        <p className="h-20">{description.substring(0, 150)}...</p>
 
         <div className="flex-between">
           <p>{currencyConverter(price)}</p>
-          <Link href={`/courses/${id}`}>View Details</Link>
+
+          <Button href={`/courses/${id}`} placeholder="view details" />
         </div>
       </div>
     </div>
