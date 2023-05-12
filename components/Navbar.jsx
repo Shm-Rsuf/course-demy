@@ -3,14 +3,17 @@ import Button from "./Button";
 
 const Navbar = () => {
   return (
-    <div className="navbar h-20 bg-gray-700 text-gray-300 flex items-center">
+    <div className="navbar h-20 bg-gray-700 text-gray-300 flex-center">
       <div className="wrapper flex justify-between">
-        <Link href="/" className="text-gray-50 font-bold tracking-wider">
+        <Link
+          href="/"
+          className="text-gray-50 font-bold tracking-wider flex-center"
+        >
           <span className="text-rose-500 capitalize">c</span>ourse
           <span className="text-teal-400">Demy</span>
         </Link>
 
-        <div className="flex gap-5">
+        <div className="gap-5 flex-center">
           <Link
             href="/"
             className="hover:text-gray-50 duration-300 transition-color"
