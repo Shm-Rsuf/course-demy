@@ -1,6 +1,7 @@
 import { currencyConverter } from "@/utilities/currencyConverter";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
+import { BsStarHalf } from "react-icons/bs";
 import Button from "./Button";
 
 const CourseItem = ({ course }) => {
@@ -49,6 +50,8 @@ const CourseItem = ({ course }) => {
             <FaStar className="text-yellow-400" />{" "}
             <FaStar className="text-yellow-400" />{" "}
             <FaStar className="text-yellow-400" />{" "}
+            <FaStar className="text-yellow-400" />{" "}
+            <BsStarHalf className="text-yellow-400" />{" "}
             <span className="text-gray-900 font-bold">{rating}</span>
           </span>
         </p>
@@ -58,12 +61,7 @@ const CourseItem = ({ course }) => {
         <div className="flex-between">
           <p>{currencyConverter(price)}</p>
 
-          <Button
-            href={`/courses/${id}`}
-            placeholder="View Details"
-            color="primary"
-            size="full"
-          />
+          <Button href={`/courses/${id}`} placeholder="View Details" />
         </div>
       </div>
     </div>
