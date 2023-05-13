@@ -2,7 +2,7 @@ import { cva } from "class-variance-authority";
 import clsx from "clsx";
 import Link from "next/link";
 
-const buttonVarients = cva("rounded-md duration-300", {
+const buttonVarients = cva("rounded-md transition-colors duration-300", {
   variants: {
     color: {
       primary: "text-gray-300 hover:text-gray-50 hover:bg-gray-800",

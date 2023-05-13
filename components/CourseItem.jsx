@@ -64,7 +64,7 @@ const CourseItem = ({ course }) => {
           <Button
             href={`/courses/${id}`}
             placeholder="View Details"
-            color="danger"
+            color="secondary"
           />
         </div>
       </div>
