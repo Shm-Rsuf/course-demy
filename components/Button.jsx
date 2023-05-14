@@ -2,20 +2,23 @@ import { cva } from "class-variance-authority";
 import clsx from "clsx";
 import Link from "next/link";
 
-const buttonVarients = cva("rounded-md transition-colors duration-300", {
-  variants: {
-    color: {
-      primary: "text-gray-300 hover:text-gray-50 hover:bg-gray-800",
-      secondary: "bg-gray-700 text-gray-50 hover:bg-gray-900 text-gray-100",
-      danger: "bg-rose-500 text-rose-50 hover:bg-rose-700",
+const buttonVarients = cva(
+  "rounded-md transition-colors duration-300 flex justify-center item-center",
+  {
+    variants: {
+      color: {
+        primary: "text-gray-300 hover:text-gray-50 hover:bg-gray-800",
+        secondary: "bg-gray-700 text-gray-50 hover:bg-gray-900 text-gray-100",
+        teal: "bg-teal-500 text-teal-50 hover:bg-teal-700",
+      },
+      size: { default: "py-2 px-4", full: "py-2 w-full" },
     },
-    size: { default: "py-2 px-4", full: "" },
-  },
-  defaultVariants: {
-    color: "primary",
-    size: "default",
-  },
-});
+    defaultVariants: {
+      color: "primary",
+      size: "default",
+    },
+  }
+);
 
 const Button = ({ href, placeholder, color, size }) => {
   return (
