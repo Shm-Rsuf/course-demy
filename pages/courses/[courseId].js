@@ -57,7 +57,7 @@ const CourseDetailPage = ({ course }) => {
           </p>
 
           <Button
-            href={`/course/${id}`}
+            href={`/checkout/${id}`}
             placeholder="Enrolled Now"
             color="teal"
             size="full"
