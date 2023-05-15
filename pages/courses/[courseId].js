@@ -1,5 +1,6 @@
 import Button from "@/components/Button";
 import { getCourse } from "@/prisma/courses";
+import { currencyConverter } from "@/utilities/currencyConverter";
 
 const CourseDetailPage = ({ course }) => {
   const {
@@ -21,35 +22,38 @@ const CourseDetailPage = ({ course }) => {
         }}
         className="w-full h-[20rem] bg-no-repeat bg-cover bg-center"
       />
-      <div className="flex-center grid lg:grid-cols-2 space-y-2 lg:gap-10 lg:space-y-0">
-        <div className="left bg-yellow-500 flex-[0.65]">
-          <h3>{title}</h3>
+      <div className="mt-10 grid lg:grid-cols-2 space-y-2 lg:gap-10 lg:space-y-0">
+        <div className="left flex-[0.65] space-y-2">
+          <h3 className="text-3xl text-teal-400 font-bold">{title}</h3>
           <p>
-            <span>Instructor: </span>
+            <span className="text-gray-900 font-bold">Instructor : </span>
             {instructor}
           </p>
-          <p>
-            <span>Description: </span>
-            {description}
+          <p className="text-gray-600/75">
+            <span className="text-gray-900 font-bold">Description : </span>
+            {description.substring(0, 100)}...
           </p>
           <p>
-            <span>Enrolled: </span>
+            <span className="text-gray-900 font-bold">
+              Enrolled Students :{" "}
+            </span>
             {students}
           </p>
         </div>
 
-        <div className="right bg-yellow-500 flex-[0.35]">
+        <div className="right flex-[0.35] space-y-2">
           <h3>
-            <span>Duration: </span>
+            <span className="text-gray-900 font-bold">Duration : </span>
             {duration}
           </h3>
           <p>
-            <span>Price: </span>
-            {price}
-          </p>
-          <p>
-            <span>Rating: </span>
+            <span className="text-gray-900 font-bold">Rating : </span>
             {rating}
+          </p>
+
+          <p className=" text-2xl">
+            <span className="text-gray-900 font-bold">Price : </span>
+            {currencyConverter(price)}
           </p>
 
           <Button
