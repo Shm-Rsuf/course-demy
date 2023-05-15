@@ -16,7 +16,6 @@ const ContactPage = () => {
               type="text"
               id="name"
               name="name"
-              placeholder="your name"
               required
             />
           </div>
@@ -33,7 +32,6 @@ const ContactPage = () => {
               type="email"
               id="email"
               name="email"
-              placeholder="your email"
               required
             />
           </div>
@@ -56,7 +54,7 @@ const ContactPage = () => {
           </div>
           <button
             type="submit"
-            className="border border-teal-500 rounded py-2 w-full lg:w-2/5 uppercase tracking-wider bg-teal-300 text-teal-50 hover:bg-teal-500 duration-300"
+            className="border border-teal-500 rounded py-2 w-full lg:w-2/5 uppercase tracking-wider bg-teal-300 text-gray-900 hover:bg-teal-500 duration-300"
           >
             send message
           </button>
@@ -66,12 +64,16 @@ const ContactPage = () => {
       <div className="form-right lg:w-2/5 flex flex-col lg:justify-evenly gap-5">
         <address className="flex flex-col justify-between gap-10">
           <div className="present-add">
-            <h4 className="text-2xl font-bold">Present Adress:</h4>
+            <h4 className="text-2xl font-bold text-gray-700">
+              Present Adress:
+            </h4>
             <p>Islamic University</p>
             <p>Kushtia, Bangladesh</p>
           </div>
           <div className="permanent-add">
-            <h4 className="text-2xl font-bold">Present Adress:</h4>
+            <h4 className="text-2xl font-bold text-gray-700">
+              Permanent Adress:
+            </h4>
             <p>Bogura, Rajshahi, Bangladesh</p>
           </div>
         </address>
