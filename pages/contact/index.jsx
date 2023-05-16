@@ -6,7 +6,7 @@ const ContactPage = () => {
         <form className="w-full lg:w-4/5 flex flex-col gap-5">
           <div className="form-control w-full">
             <label
-              className="text-lg hover:text-teal-300 duration-300 cursor-pointer after:content-['*'] after:ml-0.5 after:text-red-500 font-medium"
+              className="text-lg cursor-pointer after:content-['*'] after:ml-0.5 after:text-red-500 font-medium"
               htmlFor="name"
             >
               Name
@@ -22,7 +22,7 @@ const ContactPage = () => {
 
           <div className="form-control w-full">
             <label
-              className="text-lg hover:text-teal-300 duration-300 cursor-pointer after:content-['*'] after:ml-0.5 after:text-red-500 font-medium"
+              className="text-lg cursor-pointer after:content-['*'] after:ml-0.5 after:text-red-500 font-medium"
               htmlFor="email"
             >
               Email
@@ -38,7 +38,7 @@ const ContactPage = () => {
 
           <div className="form-control w-full">
             <label
-              className="text-lg hover:text-teal-300 duration-300 cursor-pointer after:content-['*'] after:ml-0.5 after:text-red-500 font-medium inline"
+              className="text-lg cursor-pointer after:content-['*'] after:ml-0.5 after:text-red-500 font-medium inline"
               htmlFor="message"
             >
               Message
