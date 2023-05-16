@@ -5,7 +5,7 @@ const SectionHeader = ({ span, h2, p }) => {
         {span}
       </span>
       <h2 className="text-rose-400">{h2}</h2>
-      <p className="w-2/5 text-gray-600/75">{p}</p>
+      <p className="w-2/5 text-gray-600/75 text-center">{p}</p>
     </div>
   );
 };
