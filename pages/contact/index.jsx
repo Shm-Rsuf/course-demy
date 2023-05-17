@@ -2,7 +2,7 @@ const ContactPage = () => {
   return (
     <div className="wrapper min-h-screen py-10 lg:p-0 flex flex-col lg:flex-row gap-10">
       <div className="flex flex-col items-center gap-5 lg:w-3/5">
-        <h2 className="text-3xl text-teal-400 font-semibold mt-10">
+        <h2 className="text-4xl text-teal-400 font-semibold mt-10">
           Contact Me
         </h2>
         <form className="w-full lg:w-4/5 flex flex-col gap-5">
