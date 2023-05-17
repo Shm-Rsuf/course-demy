@@ -31,10 +31,13 @@ const checkoutPage = ({ course }) => {
         p="Fill out this from to continue checkout"
       />
 
-      <form>
-        <div className="form-control">
-          <label htmlFor="name">Name</label>
+      <form className="flex flex-col gap-5">
+        <div className="form-control flex flex-col gap-2">
+          <label htmlFor="name" className="cursor-pointer">
+            Name
+          </label>
           <input
+            className="outline-none border py-2 px-2 focus:border-teal-300 rounded"
             type="text"
             id="name"
             placeholder="Enter your name"
@@ -43,9 +46,12 @@ const checkoutPage = ({ course }) => {
           />
         </div>
 
-        <div className="form-control">
-          <label htmlFor="email">Email</label>
+        <div className="form-control flex flex-col gap-2">
+          <label htmlFor="email" className="cursor-pointer">
+            Email
+          </label>
           <input
+            className="outline-none border py-2 px-2 focus:border-teal-300 rounded"
             type="email"
             id="email"
             placeholder="hello@dev.com"
@@ -54,9 +60,12 @@ const checkoutPage = ({ course }) => {
           />
         </div>
 
-        <div className="form-control">
-          <label htmlFor="mobile">Phone Number</label>
+        <div className="form-control flex flex-col gap-2">
+          <label htmlFor="mobile" className="cursor-pointer">
+            Phone Number
+          </label>
           <input
+            className="outline-none border py-2 px-2 focus:border-teal-300 rounded"
             type="tel"
             id="mobile"
             placeholder="+88017xxxxxxxx"
@@ -67,9 +76,12 @@ const checkoutPage = ({ course }) => {
           />
         </div>
 
-        <div className="form-control">
-          <label htmlFor="address">Address</label>
+        <div className="form-control flex flex-col gap-2">
+          <label htmlFor="address" className="cursor-pointer">
+            Address
+          </label>
           <input
+            className="outline-none border py-2 px-2 focus:border-teal-300 rounded"
             type="text"
             id="address"
             placeholder="House no"
@@ -80,9 +92,12 @@ const checkoutPage = ({ course }) => {
           />
         </div>
 
-        <div className="form-control">
-          <label htmlFor="courseTitle">Course title</label>
+        <div className="form-control flex flex-col gap-2">
+          <label htmlFor="courseTitle" className="cursor-pointer">
+            Course title
+          </label>
           <input
+            className="outline-none border py-2 px-2 focus:border-teal-300 rounded"
             type="text"
             id="courseTitle"
             placeholder="Advance javascript"
@@ -91,9 +106,12 @@ const checkoutPage = ({ course }) => {
           />
         </div>
 
-        <div className="form-control">
-          <label htmlFor="price">Price in (USD)</label>
+        <div className="form-control flex flex-col gap-2">
+          <label htmlFor="price" className="cursor-pointer">
+            Price in (USD)
+          </label>
           <input
+            className="outline-none border py-2 px-2 focus:border-teal-300 rounded"
             type="number"
             id="price"
             placeholder="$100"
