@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Button from "./Button";
+import { useSession } from "next-auth/react";
 
 const Navbar = () => {
+  const { data: session } = useSession();
   return (
     <div className="navbar h-20 bg-gray-700 text-gray-400 flex-center">
       <div className="wrapper flex justify-between">
@@ -41,7 +43,15 @@ const Navbar = () => {
         </div>
 
         <div>
-          <Button href="/users/login" placeholder="Log In" color="primary" />
+          {!session ? (
+            <Button href="/users/login" placeholder="Log In" color="primary" />
+          ) : (
+            <Button
+              href="/users/profile"
+              placeholder="Profile"
+              color="primary"
+            />
+          )}
         </div>
       </div>
     </div>

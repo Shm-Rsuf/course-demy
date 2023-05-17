@@ -19,7 +19,7 @@ const profile = ({ session }) => {
     if (!session) {
       router.replace("/users/login");
     }
-  }, [session, router]);
+  }, [router, session]);
 
   if (!session) {
     return null;
@@ -57,7 +57,7 @@ export const getServerSideProps = async (context) => {
   if (!session) {
     return {
       redirect: {
-        destination: "users/login",
+        destination: "/users/login",
         permanent: false,
       },
     };
