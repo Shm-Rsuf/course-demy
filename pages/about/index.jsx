@@ -50,17 +50,21 @@ const AboutPage = () => {
           </div>
         </div>
         <div className="about-me-right flex justify-evenly flex-col gap-5 lg:w-2/4">
-          <p className="text-lg text-justify">
-            I am a proficient Front-End-Developer with expertise in creating
-            dynamic and user-friendly websites and applications. I have a great
-            experience with JavaScript, React, Next, and creative design with
-            Tailwind. I am able to create efficient, clean code that delivers
-            unique outcomes. In addition to my technical expertise, I am also a
-            creative mind with a keen eye for design, enabling me to create
-            outstanding and visually appealing web applications. With my passion
-            for excellence and dedication to achieving success, I am confident
-            that I would be an asset to any team.
-          </p>
+          <div className="text-lg text-justify">
+            <p>
+              I am a proficient Front-End-Developer with expertise in creating
+              dynamic and user-friendly websites and applications. I have a
+              great experience with JavaScript, React, Next, and creative design
+              with Tailwind. I am able to create efficient, clean code that
+              delivers unique outcomes. In addition to my technical expertise.
+            </p>
+            <p>
+              I am also a creative mind with a keen eye for design, enabling me
+              to create outstanding and visually appealing web applications.
+              With my passion for excellence and dedication to achieving
+              success, I am confident that I would be an asset to any team.
+            </p>
+          </div>
 
           <Button
             href="/"
