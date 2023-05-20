@@ -2,6 +2,11 @@ import SectionHeader from "@/components/SectionHeader";
 import { getCourse } from "@/prisma/courses";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
+import { loadStripe } from "@stripe/stripe-js";
+import axios from "axios";
+
+/* STRIPE PROMISE */
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
 
 const checkoutPage = ({ course }) => {
   const { data: session } = useSession();
@@ -24,8 +29,30 @@ const checkoutPage = ({ course }) => {
     }
   }, [session]);
 
+  /* CHECKOUT HANDLER */
   const handleCheckout = async (e) => {
     e.preventDefault();
+
+    const stripe = await stripePromise;
+
+    /* SEND A POST REQ. TO THE SERVER */
+    const checkoutSession = await axios.post("/api/create-checkout-session", {
+      items: [course],
+      name: formData.name,
+      email: formData.email,
+      address: formData.address,
+      courseTitle: formData.courseTitle,
+      mobile: formData.mobile,
+    });
+
+    /* RE-DIRECT TO THE STRIPE PAYMENT */
+    const result = await stripe.redirectToCheckout({
+      sessionId: checkoutSession.data.id,
+    });
+
+    if (result.error) {
+      console.log(result.error.message);
+    }
   };
 
   return (
