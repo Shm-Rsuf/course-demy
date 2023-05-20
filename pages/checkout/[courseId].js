@@ -24,6 +24,10 @@ const checkoutPage = ({ course }) => {
     }
   }, [session]);
 
+  const handleCheckout = async (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="wrapper py-10 min-h-screen">
       <SectionHeader
@@ -33,7 +37,10 @@ const checkoutPage = ({ course }) => {
       />
 
       <div className="flex justify-center">
-        <form className="flex flex-col gap-5 mt-10 w-full lg:w-1/2">
+        <form
+          onSubmit={handleCheckout}
+          className="flex flex-col gap-5 mt-10 w-full lg:w-1/2"
+        >
           <div className="form-control flex flex-col gap-2">
             <label htmlFor="name" className="cursor-pointer">
               Name
@@ -122,7 +129,11 @@ const checkoutPage = ({ course }) => {
             />
           </div>
 
-          <button className="uppercase tracking-wider bg-teal-400 text-teal-200 hover:bg-teal-500 hover:text-teal-50 duration-300 rounded py-2 w-full">
+          <button
+            type="submit"
+            role="link"
+            className="uppercase tracking-wider bg-teal-400 text-teal-200 hover:bg-teal-500 hover:text-teal-50 duration-300 rounded py-2 w-full"
+          >
             proceed to checkout
           </button>
         </form>
