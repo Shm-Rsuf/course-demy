@@ -101,6 +101,7 @@ const checkoutPage = ({ course }) => {
               Phone Number
             </label>
             <input
+              required
               className="outline-none border py-2 px-2 focus:border-teal-300 rounded"
               type="tel"
               id="mobile"
@@ -117,6 +118,7 @@ const checkoutPage = ({ course }) => {
               Address
             </label>
             <input
+              required
               className="outline-none border py-2 px-2 focus:border-teal-300 rounded"
               type="text"
               id="address"
