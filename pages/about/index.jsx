@@ -66,7 +66,7 @@ const AboutPage = () => {
           </div>
         </div>
         <div className="about-me-right flex justify-evenly flex-col gap-5 lg:w-2/4">
-          <div className="text-lg text-justify">
+          <div className="text-lg text-justify flex flex-col gap-5">
             <p>
               I am a proficient Front-End-Developer with expertise in creating
               dynamic and user-friendly websites and applications. I have a
