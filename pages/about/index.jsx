@@ -26,23 +26,39 @@ const AboutPage = () => {
             engaging digital experiences. Always exploring new technologies.
           </p>
 
-          <div className="socials-links flex justify-center items-center gap-3 mt-10">
-            <Link href="/">
+          <div className="socials-links flex justify-center items-center gap-3 mt-10 text-2xl">
+            <Link
+              className="text-blue-600 hover:text-blue-700 duration-300"
+              href="https://www.facebook.com/shmUsuf15"
+              target="_blank"
+            >
               <span>
                 <FaFacebook />
               </span>
             </Link>
-            <Link href="/">
+            <Link
+              href="https://www.linkedin.com/in/shm-usuf/"
+              target="_blank"
+              className="text-blue-700 hover:text-blue-800 duration-300"
+            >
               <span>
                 <FaLinkedin />
               </span>
             </Link>
-            <Link href="/">
+            <Link
+              href="https://github.com/Shm-Rsuf"
+              target="_blank"
+              className="text-gray-900 hover:text-gray-800 duration-300"
+            >
               <span>
                 <FaGithub />
               </span>
             </Link>
-            <Link href="/">
+            <Link
+              href="https://twitter.com/shm_usuf"
+              target="_blank"
+              className="text-teal-400 hover:text-teal-500 duration-300"
+            >
               <span>
                 <FaTwitter />
               </span>
