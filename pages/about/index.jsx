@@ -83,7 +83,7 @@ const AboutPage = () => {
           </div>
 
           <Button
-            href="https://drive.google.com/drive/u/0/my-drive"
+            href="https://drive.google.com/file/d/1b3bI1vtlOvC_JlNuRcoxH_gRaxCGqDj5/view"
             placeholder="View Resume"
             color="primary"
             size="default"
