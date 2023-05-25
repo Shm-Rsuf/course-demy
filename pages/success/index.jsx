@@ -1,5 +1,5 @@
 const SuccessPage = () => {
-  return <div>SuccessPage</div>;
+  return <div className="wrapper min-h-screen py-10">SuccessPage</div>;
 };
 
 export default SuccessPage;
