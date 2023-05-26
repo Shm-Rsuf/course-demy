@@ -50,6 +50,15 @@ export const getServerSideProps = async (context) => {
     },
   });
 
+  if (!session || !customer) {
+    return {
+      redirect: {
+        destination: "/users/login",
+        permanent: true,
+      },
+    };
+  }
+
   const updatedCustomer = {
     ...customer,
     createdAt: customer.createdAt.toString(),
