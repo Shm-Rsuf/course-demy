@@ -40,6 +40,14 @@ const Navbar = () => {
           >
             Contact
           </Link>
+          {session && (
+            <Link
+              href="/orders"
+              className="hover:text-gray-50 duration-300 transition-color"
+            >
+              Orders
+            </Link>
+          )}
         </div>
 
         <div>
