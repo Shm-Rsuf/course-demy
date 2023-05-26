@@ -1,3 +1,4 @@
+import OrderCourse from "@/components/OrderCourse";
 import prisma from "@/prisma/prisma";
 import { getSession } from "next-auth/react";
 import { useRouter } from "next/router";
@@ -26,6 +27,12 @@ const OrdersPage = ({ session, customer }) => {
         course
         {customer.orders.length > 1 ? "s" : ""}
       </h2>
+
+      <div className="courses flex flex-wrap justify-between items-center gap-10 mt-10">
+        {customer.orders.map((course) => (
+          <OrderCourse key={course.id} course={course} />
+        ))}
+      </div>
     </div>
   );
 };
