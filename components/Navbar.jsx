@@ -26,38 +26,73 @@ const Navbar = () => {
         </motion.div>
 
         <div className="gap-5 flex-center">
-          <Link
-            href="/"
-            className="hover:text-gray-50 duration-300 transition-color"
+          <motion.div
+            variants={sutterDown()}
+            initial="from"
+            animate="to"
+            transition={getTransition()}
           >
-            Home
-          </Link>
-          <Link
-            href="/courses"
-            className="hover:text-gray-50 duration-300 transition-color"
-          >
-            Courses
-          </Link>
-          <Link
-            href="/about"
-            className="hover:text-gray-50 duration-300 transition-color"
-          >
-            About
-          </Link>
-          <Link
-            href="/contact"
-            className="hover:text-gray-50 duration-300 transition-color"
-          >
-            Contact
-          </Link>
-          {session && (
             <Link
-              href="/orders"
+              href="/"
               className="hover:text-gray-50 duration-300 transition-color"
             >
-              Orders
+              Home
             </Link>
-          )}
+          </motion.div>
+          <motion.div
+            variants={sutterDown()}
+            initial="from"
+            animate="to"
+            transition={getTransition()}
+          >
+            <Link
+              href="/courses"
+              className="hover:text-gray-50 duration-300 transition-color"
+            >
+              Courses
+            </Link>
+          </motion.div>
+          <motion.div
+            variants={sutterDown()}
+            initial="from"
+            animate="to"
+            transition={getTransition()}
+          >
+            <Link
+              href="/about"
+              className="hover:text-gray-50 duration-300 transition-color"
+            >
+              About
+            </Link>
+          </motion.div>
+          <motion.div
+            variants={sutterDown()}
+            initial="from"
+            animate="to"
+            transition={getTransition()}
+          >
+            <Link
+              href="/contact"
+              className="hover:text-gray-50 duration-300 transition-color"
+            >
+              Contact
+            </Link>
+          </motion.div>
+          <motion.div
+            variants={sutterDown()}
+            initial="from"
+            animate="to"
+            transition={getTransition()}
+          >
+            {session && (
+              <Link
+                href="/orders"
+                className="hover:text-gray-50 duration-300 transition-color"
+              >
+                Orders
+              </Link>
+            )}
+          </motion.div>
         </div>
 
         <div>

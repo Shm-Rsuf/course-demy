@@ -3,6 +3,8 @@ import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 import { BsStarHalf } from "react-icons/bs";
 import Button from "./Button";
+import { motion } from "framer-motion";
+import { getTransition, sutterUp } from "@/utilities/motion";
 
 const CourseItem = ({ course }) => {
   const {
@@ -17,7 +19,13 @@ const CourseItem = ({ course }) => {
     id,
   } = course;
   return (
-    <div className="w-full lg:w-[25rem] shadow-md rounded-md overflow-hidden">
+    <motion.div
+      variants={sutterUp()}
+      initial="from"
+      whileInView="to"
+      transition={getTransition()}
+      className="w-full lg:w-[25rem] shadow-md rounded-md overflow-hidden"
+    >
       <div className="w-full h-[25rem] lg:h-[20rem] overflow-hidden">
         <Image
           src={cover}
@@ -68,7 +76,7 @@ const CourseItem = ({ course }) => {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
