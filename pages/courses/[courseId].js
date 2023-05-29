@@ -33,8 +33,16 @@ const CourseDetailPage = ({ course }) => {
           backgroundImage: `url(${cover})`,
         }}
         className="w-full h-[20rem] bg-no-repeat bg-cover bg-center"
+        data-aos="fade-up"
+        data-aos-delay="500"
+        data-aos-duration="1000"
       />
-      <div className="mt-10 grid lg:grid-cols-2 space-y-2 lg:gap-10 lg:space-y-0">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="1000"
+        data-aos-duration="1000"
+        className="mt-10 grid lg:grid-cols-2 space-y-2 lg:gap-10 lg:space-y-0"
+      >
         <div className="left flex-[0.65] space-y-2">
           <h3 className="text-3xl text-teal-400 font-bold">{title}</h3>
           <p>
