@@ -1,19 +1,29 @@
 import Link from "next/link";
 import Button from "./Button";
 import { useSession } from "next-auth/react";
+import { motion } from "framer-motion";
+import { getTransition, sutterDown } from "@/utilities/motion";
 
 const Navbar = () => {
   const { data: session } = useSession();
   return (
-    <div className="navbar h-20 bg-gray-700 text-gray-400 flex-center">
-      <div className="wrapper flex justify-between">
-        <Link
-          href="/"
-          className="text-gray-50 text-xl font-bold tracking-wider flex-center"
+    <div className="navbar h-20 bg-gray-700 text-gray-400 flex-center ">
+      <div className="wrapper flex justify-between overflow-hidden">
+        <motion.div
+          className="flex justify-center items-center"
+          variants={sutterDown()}
+          initial="from"
+          animate="to"
+          transition={getTransition()}
         >
-          <span className="text-rose-500 capitalize">c</span>ourse
-          <span className="text-teal-400">Demy</span>
-        </Link>
+          <Link
+            href="/"
+            className="text-gray-50 text-xl font-bold tracking-wider flex-center"
+          >
+            <span className="text-rose-500 capitalize">c</span>ourse
+            <span className="text-teal-400">Demy</span>
+          </Link>
+        </motion.div>
 
         <div className="gap-5 flex-center">
           <Link
