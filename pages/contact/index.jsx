@@ -1,9 +1,11 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactPage = () => {
   const form = useRef();
-
+  const notify = () => toast("message sent successfully");
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -88,11 +90,13 @@ const ContactPage = () => {
             ></textarea>
           </div>
           <button
+            onClick={notify}
             type="send"
             className="border border-teal-500 rounded py-2 w-full lg:w-2/5 uppercase tracking-wider bg-teal-300 text-gray-900 hover:bg-teal-500 duration-300"
           >
             send message
           </button>
+          <ToastContainer />
         </form>
       </div>
 
