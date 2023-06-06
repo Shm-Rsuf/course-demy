@@ -20,10 +20,9 @@ const AboutPage = () => {
               className="w-28 h-28 rounded-full"
             />
           </div>
-          <h2 className="text-4xl text-teal-400 font-bold">Hello, I'm Usuf</h2>
+          <h2 className="text-4xl text-teal-400 font-bold">{`Hello, I'm Usuf`}</h2>
           <p className="w-8/12 text-justify">
-            I'm a front-end developer, bridging design and technology to create
-            engaging digital experiences. Always exploring new technologies.
+            {` As a front-end developer, I'm always exploring new technologies and expanding my skills to create engaging digital experiences. I bridge design and technology.`}
           </p>
 
           <div className="socials-links flex justify-center items-center gap-3 mt-10 text-2xl">

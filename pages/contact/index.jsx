@@ -14,7 +14,7 @@ const ContactPage = () => {
         "service_y31hs6h",
         "template_mu36rax",
         form.current,
-        "YaZ5esYQjfcaYea7u"
+        "EGk7dHLH1G6fYqWHf"
       )
       .then(
         (result) => {
