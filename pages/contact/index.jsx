@@ -1,11 +1,44 @@
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
 const ContactPage = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_y31hs6h",
+        "template_mu36rax",
+        form.current,
+        "YaZ5esYQjfcaYea7u"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("successful");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    //reset value
+    e.target.querySelector(".name").value = "";
+    e.target.querySelector(".email").value = "";
+    e.target.querySelector(".message").value = "";
+  };
   return (
     <div className="wrapper min-h-screen py-10 lg:p-0 flex flex-col lg:flex-row gap-10">
       <div className="flex flex-col items-center gap-5 lg:w-3/5">
         <h2 className="text-4xl text-teal-400 font-semibold mt-10">
           Contact Me
         </h2>
-        <form className="w-full lg:w-4/5 flex flex-col gap-5">
+        <form
+          className="w-full lg:w-4/5 flex flex-col gap-5"
+          ref={form}
+          onSubmit={sendEmail}
+        >
           <div className="form-control w-full">
             <label
               className="text-lg cursor-pointer after:content-['*'] after:ml-0.5 after:text-red-500 font-medium"
@@ -14,7 +47,7 @@ const ContactPage = () => {
               Name
             </label>
             <input
-              className="w-full py-2 px-2 bg-transparent rounded border outline-none focus:border-teal-300"
+              className="name w-full py-2 px-2 bg-transparent rounded border outline-none focus:border-teal-300"
               type="text"
               id="name"
               name="name"
@@ -30,7 +63,7 @@ const ContactPage = () => {
               Email
             </label>
             <input
-              className="w-full py-2 px-2 bg-transparent rounded border outline-none focus:border-teal-300"
+              className="email w-full py-2 px-2 bg-transparent rounded border outline-none focus:border-teal-300"
               type="email"
               id="email"
               name="email"
@@ -46,7 +79,7 @@ const ContactPage = () => {
               Message
             </label>
             <textarea
-              className="w-full py-2 px-2 bg-transparent rounded border focus:outline-none focus:border-teal-300 resize-none"
+              className="message w-full py-2 px-2 bg-transparent rounded border focus:outline-none focus:border-teal-300 resize-none"
               name="message"
               id="message"
               cols="30"
@@ -55,7 +88,7 @@ const ContactPage = () => {
             ></textarea>
           </div>
           <button
-            type="submit"
+            type="send"
             className="border border-teal-500 rounded py-2 w-full lg:w-2/5 uppercase tracking-wider bg-teal-300 text-gray-900 hover:bg-teal-500 duration-300"
           >
             send message
