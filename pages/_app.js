@@ -8,7 +8,10 @@ import { useEffect } from "react";
 
 export default function App({ Component, pageProps, session }) {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
   }, []);
 
   return (

@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div className="navbar h-20 bg-gray-700 text-gray-400 flex-center ">
       <div className="wrapper flex justify-between overflow-hidden">
-        <div className="flex justify-center items-center">
+        <div data-aos="fade-right" className="flex justify-center items-center">
           <Link
             href="/"
             className="text-gray-50 text-xl font-bold tracking-wider flex-center"
@@ -18,7 +18,7 @@ const Navbar = () => {
         </div>
 
         <div className="gap-5 flex-center">
-          <div>
+          <div data-aos="fade-down">
             <Link
               href="/"
               className="hover:text-gray-50 duration-300 transition-color"
@@ -26,7 +26,7 @@ const Navbar = () => {
               Home
             </Link>
           </div>
-          <div>
+          <div data-aos="fade-down">
             <Link
               href="/courses"
               className="hover:text-gray-50 duration-300 transition-color"
@@ -34,7 +34,7 @@ const Navbar = () => {
               Courses
             </Link>
           </div>
-          <div>
+          <div data-aos="fade-down">
             <Link
               href="/about"
               className="hover:text-gray-50 duration-300 transition-color"
@@ -42,7 +42,7 @@ const Navbar = () => {
               About
             </Link>
           </div>
-          <div>
+          <div data-aos="fade-down">
             <Link
               href="/contact"
               className="hover:text-gray-50 duration-300 transition-color"
@@ -50,7 +50,7 @@ const Navbar = () => {
               Contact
             </Link>
           </div>
-          <div>
+          <div data-aos="fade-down">
             {session && (
               <Link
                 href="/orders"
@@ -62,7 +62,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div>
+        <div data-aos="fade-left">
           {!session ? (
             <Button href="/users/login" placeholder="Log In" color="primary" />
           ) : (
