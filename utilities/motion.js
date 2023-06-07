@@ -1,4 +1,8 @@
-export const getTransition = (delay = 0, duration = 1, ease = "easeInOut") => {
+export const getTransition = (
+  delay = 2.5,
+  duration = 2.5,
+  ease = "easeInOut"
+) => {
   return delay, duration, ease;
 };
 
@@ -11,7 +15,21 @@ export const sutterDown = () => {
 
 export const sutterUp = () => {
   return {
-    from: { y: "200", opacity: 0 },
+    from: { y: "200%", opacity: 0 },
     to: { y: 0, opacity: 1 },
+  };
+};
+
+export const sutterLeft = () => {
+  return {
+    from: { x: "-200%", opacity: 0 },
+    to: { x: 0, opacity: 1 },
+  };
+};
+
+export const sutterRight = () => {
+  return {
+    from: { x: "200%", opacity: 0 },
+    to: { x: 0, opacity: 1 },
   };
 };
