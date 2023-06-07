@@ -32,12 +32,11 @@ const ContactPage = () => {
   };
   return (
     <>
-      <h2
-        data-aos="fade-down"
-        className="wrapper text-center mt-10 text-4xl text-teal-400 font-semibold"
-      >
-        Contact Me
-      </h2>
+      <div data-aos="fade-down">
+        <h2 className="wrapper text-center mt-10 text-4xl text-teal-400 font-semibold">
+          Contact Me
+        </h2>
+      </div>
       <div className="wrapper min-h-screen mt-10 flex flex-col lg:flex-row gap-10">
         <div
           data-aos="fade-right"
