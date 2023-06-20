@@ -6,11 +6,17 @@ import { FaFacebook, FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 const AboutPage = () => {
   return (
     <div className="wrapper my-10 min-h-screen lg:w-3/4">
-      <h2 className="text-4xl text-center text-teal-400 font-semibold capitalize">
+      <h2
+        data-aos="fade-up"
+        className="text-4xl text-center text-teal-400 font-semibold capitalize"
+      >
         about me
       </h2>
       <div className="about-me-container my-10 flex flex-col lg:flex-row lg:gap-20 gap-10">
-        <div className="about-me-left flex flex-col items-center gap-5 lg:w-2/5 lg:h-[80vh] bg-gray-200 p-2 rounded-md shadow-lg">
+        <div
+          data-aos="fade-right"
+          className="about-me-left flex flex-col items-center gap-5 lg:w-2/5 lg:h-[80vh] bg-gray-200 p-2 rounded-md shadow-lg"
+        >
           <div className="about-img">
             <Image
               src="https://images.pexels.com/photos/5926389/pexels-photo-5926389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -64,7 +70,10 @@ const AboutPage = () => {
             </Link>
           </div>
         </div>
-        <div className="about-me-right flex justify-evenly flex-col gap-5 lg:w-2/4">
+        <div
+          data-aos="fade-left"
+          className="about-me-right flex justify-evenly flex-col gap-5 lg:w-2/4"
+        >
           <div className="text-lg text-justify flex flex-col gap-5">
             <p>
               I am a proficient Front-End-Developer with expertise in creating
