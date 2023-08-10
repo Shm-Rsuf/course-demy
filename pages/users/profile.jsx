@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { BiLogOut } from "react-icons/bi";
 
-const profile = ({ session }) => {
+const Profile = ({ session }) => {
   const router = useRouter();
 
   const logoutWithGoogleHandler = async () => {
@@ -49,7 +49,7 @@ const profile = ({ session }) => {
   );
 };
 
-export default profile;
+export default Profile;
 
 export const getServerSideProps = async (context) => {
   const session = await getSession(context);

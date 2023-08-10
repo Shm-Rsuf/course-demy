@@ -24,7 +24,7 @@ const SuccessPage = (session) => {
           <span className="text-emerald-500">
             <AiOutlineCheckCircle />
           </span>
-          You've enrolled successfully
+          You&apos;ve enrolled successfully
         </h2>
         <Button
           href="/orders"
