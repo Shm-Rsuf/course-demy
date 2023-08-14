@@ -1,4 +1,4 @@
-# Course-Demy- An Online Learnign Platform
+# Course-Demy- An Online Learning Platform
 
 Welcome to Course-demy, the ultimate online destination for unlocking your full potential through the power of education. Our platform is built on a powerful technology stack, including Next.js, React, Prisma, Tailwind, Nest-Auth, and Stripe
 
